@@ -390,7 +390,7 @@ function initialize(text, settings, a)
         else
             properties:append('\\crWill Stop When Skillup Done')
         end
-        properties:append('\\crSkillup ${start|\\cs(255,0,0)Stoped}')
+        properties:append('\\crSkillup ${start|\\cs(255,0,0)Stopped}')
         properties:append("\\crSkillup's Per Hour \\cs(255,255,0)${skill_ph|0}")
         properties:append("\\crTotal Skillup's \\cs(255,255,0)${skill_total|0}")
         text:clear()
@@ -422,7 +422,7 @@ function updatedisplay()
     local info = {}
         info.mode = gs_skill.skillup_type
         info.modeb = skilluprun and info.mode or 'None'
-        info.start = (skilluprun and '\\cs(0,255,0)Started' or '\\cs(255,0,0)Stoped')
+        info.start = (skilluprun and '\\cs(0,255,0)Started' or '\\cs(255,0,0)Stopped')
         info.skillssing = (gs_skillup.skill['Singing Capped'] and "Capped" or gs_skillup.skill['Singing Level'])
         info.skillstring = (gs_skillup.skill['Stringed Instrument Capped'] and "Capped" or gs_skillup.skill['Stringed Instrument Level'])
         info.skillwind = (gs_skillup.skill['Wind Instrument Capped'] and "Capped" or gs_skillup.skill['Wind Instrument Level'])
